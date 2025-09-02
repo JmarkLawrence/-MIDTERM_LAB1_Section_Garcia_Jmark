@@ -13,7 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 
 builder.Services.AddScoped<IGradeService, GradeService>();
-builder.Services.AddScoped<ICsvParsingService, CsvParsingService>(); 
+builder.Services.AddScoped<ICsvParsingService, CsvParsingService>();
 
 
 var app = builder.Build();
@@ -35,6 +35,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Records}/{id?}");
 
 app.Run();
